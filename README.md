@@ -7,4 +7,11 @@ Library that I used from this project :
 3. SMSLib v3
 
 Database Name : Mujigue
+
 IDE : Netbeans
+
+JDK Version only run at 32Bit Version (SMSLib Requirement)
+
+SMSLib configuration and Installation i learned from this website :
+http://gsmmodemtutoialbysamyan.blogspot.com/
+https://github.com/tdelenikas/smslib-v3
