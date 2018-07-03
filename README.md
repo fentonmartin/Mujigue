@@ -12,6 +12,8 @@ IDE : Netbeans
 
 JDK Version only run at 32Bit Version (SMSLib Requirement)
 
+USB Modem that i used : Huawei E153
+
 SMSLib configuration and Installation i learned from this website :
 
 http://gsmmodemtutoialbysamyan.blogspot.com/
