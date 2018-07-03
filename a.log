@@ -1,0 +1,408 @@
+2018-07-03 21:48:49 INFO  ClassPathXmlApplicationContext:513 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1363fb3: startup date [Tue Jul 03 21:48:49 ICT 2018]; root of context hierarchy
+2018-07-03 21:48:49 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [spring-configuration.xml]
+2018-07-03 21:48:50 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-03 21:48:50 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2018-07-03 21:48:50 INFO  Version:54 - HHH000412: Hibernate Core {4.3.1.Final}
+2018-07-03 21:48:50 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2018-07-03 21:48:50 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2018-07-03 21:48:50 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/Catnip%20Dev/My%20Project/Pemrograman%20Jaringan/Mujigue/build/classes/hibernate.cfg.xml
+2018-07-03 21:48:50 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2018-07-03 21:48:50 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2018-07-03 21:48:52 WARN  JdbcServicesImpl:204 - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-07-03 21:48:52 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-07-03 21:48:52 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2018-07-03 21:48:53 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-07-03 21:48:53 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-03 21:48:53 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2018-07-03 21:48:53 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2018-07-03 21:48:55 ERROR SchemaUpdate:201 - HHH000319: Could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2461)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2498)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2283)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:822)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:404)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:317)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:153)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:144)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:155)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:120)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:521)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at mujigue.app.App.main(App.java:24)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:305)
+	... 55 more
+2018-07-03 21:48:55 ERROR SchemaUpdate:247 - HHH000299: Could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2461)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2498)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2283)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:822)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:404)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:317)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:153)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:144)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:155)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:120)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:521)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at mujigue.app.App.main(App.java:24)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:305)
+	... 55 more
+2018-07-03 21:48:55 INFO  HibernateTransactionManager:341 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@359ebd] of Hibernate SessionFactory for HibernateTransactionManager
+2018-07-03 21:49:42 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 08S01
+2018-07-03 21:49:42 ERROR SqlExceptionHelper:146 - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-07-03 21:49:46 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 08S01
+2018-07-03 21:49:46 ERROR SqlExceptionHelper:146 - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2018-07-03 23:05:35 INFO  ClassPathXmlApplicationContext:513 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7d6f77cc: startup date [Tue Jul 03 23:05:35 ICT 2018]; root of context hierarchy
+2018-07-03 23:05:35 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [spring-configuration.xml]
+2018-07-03 23:05:36 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-03 23:05:36 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2018-07-03 23:05:36 INFO  Version:54 - HHH000412: Hibernate Core {4.3.1.Final}
+2018-07-03 23:05:36 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2018-07-03 23:05:36 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2018-07-03 23:05:36 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/Catnip%20Dev/My%20Project/Pemrograman%20Jaringan/Mujigue/build/classes/hibernate.cfg.xml
+2018-07-03 23:05:36 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2018-07-03 23:05:36 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2018-07-03 23:05:37 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-07-03 23:05:37 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-07-03 23:05:37 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-03 23:05:37 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2018-07-03 23:05:37 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2018-07-03 23:05:37 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2018-07-03 23:05:38 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.admin
+2018-07-03 23:05:38 INFO  TableMetadata:67 - HHH000037: Columns: [password, nama, nip, id_admin]
+2018-07-03 23:05:38 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:05:38 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:05:38 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.daftarmeja
+2018-07-03 23:05:38 INFO  TableMetadata:67 - HHH000037: Columns: [id_meja, lokasimeja, no_meja, terisi, kapasitas_meja]
+2018-07-03 23:05:38 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:05:38 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:05:38 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.pelanggan
+2018-07-03 23:05:38 INFO  TableMetadata:67 - HHH000037: Columns: [notelp, totalpelanggan, waktubooking, namapelanggan, id_pelanggan]
+2018-07-03 23:05:38 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:05:38 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:05:38 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2018-07-03 23:05:38 INFO  HibernateTransactionManager:341 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@5b04476e] of Hibernate SessionFactory for HibernateTransactionManager
+2018-07-03 23:05:46 INFO  smslib:113 - SMSLib: A Java API library for sending and receiving SMS via a GSM modem or other supported gateways.
+This software is distributed under the terms of the Apache v2.0 License.
+Web Site: http://smslib.org
+2018-07-03 23:05:46 INFO  smslib:114 - Version: 3.5.0
+2018-07-03 23:05:46 INFO  smslib:115 - JRE Version: 1.8.0_152
+2018-07-03 23:05:46 INFO  smslib:116 - JRE Impl Version: 25.152-b16
+2018-07-03 23:05:46 INFO  smslib:117 - O/S: Windows 10 / amd64 / 10.0
+2018-07-03 23:05:46 INFO  smslib:92 - Queue directory not defined. Queued messages will not be saved to filesystem.
+2018-07-03 23:05:46 INFO  smslib:188 - GTW: modem.COM11: Starting gateway, using Huawei (Generic) AT Handler.
+2018-07-03 23:05:46 INFO  smslib:68 - GTW: modem.COM11: Opening: COM11 @9600
+2018-07-03 23:05:46 INFO  smslib:120 - GTW: modem.COM11: Closing: COM11 @9600
+2018-07-03 23:05:47 INFO  smslib:197 - GTW: modem.COM11: Stopping gateway...
+2018-07-03 23:05:47 INFO  smslib:120 - GTW: modem.COM11: Closing: COM11 @9600
+2018-07-03 23:05:47 INFO  smslib:201 - GTW: modem.COM11: Gateway stopped.
+2018-07-03 23:05:48 INFO  smslib:197 - GTW: modem.COM11: Stopping gateway...
+2018-07-03 23:05:48 INFO  smslib:120 - GTW: modem.COM11: Closing: COM11 @9600
+2018-07-03 23:05:48 INFO  smslib:201 - GTW: modem.COM11: Gateway stopped.
+2018-07-03 23:07:26 INFO  ClassPathXmlApplicationContext:513 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7d6f77cc: startup date [Tue Jul 03 23:07:26 ICT 2018]; root of context hierarchy
+2018-07-03 23:07:26 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [spring-configuration.xml]
+2018-07-03 23:07:27 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-03 23:07:27 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2018-07-03 23:07:27 INFO  Version:54 - HHH000412: Hibernate Core {4.3.1.Final}
+2018-07-03 23:07:27 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2018-07-03 23:07:27 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2018-07-03 23:07:27 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/Catnip%20Dev/My%20Project/Pemrograman%20Jaringan/Mujigue/build/classes/hibernate.cfg.xml
+2018-07-03 23:07:27 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2018-07-03 23:07:27 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2018-07-03 23:07:27 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-07-03 23:07:27 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-07-03 23:07:27 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-03 23:07:28 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2018-07-03 23:07:28 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2018-07-03 23:07:28 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2018-07-03 23:07:28 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.admin
+2018-07-03 23:07:28 INFO  TableMetadata:67 - HHH000037: Columns: [password, nama, nip, id_admin]
+2018-07-03 23:07:28 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:07:28 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:07:28 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.daftarmeja
+2018-07-03 23:07:28 INFO  TableMetadata:67 - HHH000037: Columns: [id_meja, lokasimeja, no_meja, terisi, kapasitas_meja]
+2018-07-03 23:07:28 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:07:28 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:07:28 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.pelanggan
+2018-07-03 23:07:28 INFO  TableMetadata:67 - HHH000037: Columns: [notelp, totalpelanggan, waktubooking, namapelanggan, id_pelanggan]
+2018-07-03 23:07:28 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:07:28 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:07:28 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2018-07-03 23:07:28 INFO  HibernateTransactionManager:341 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@5b04476e] of Hibernate SessionFactory for HibernateTransactionManager
+2018-07-03 23:07:48 INFO  smslib:113 - SMSLib: A Java API library for sending and receiving SMS via a GSM modem or other supported gateways.
+This software is distributed under the terms of the Apache v2.0 License.
+Web Site: http://smslib.org
+2018-07-03 23:07:48 INFO  smslib:114 - Version: 3.5.0
+2018-07-03 23:07:48 INFO  smslib:115 - JRE Version: 1.8.0_152
+2018-07-03 23:07:48 INFO  smslib:116 - JRE Impl Version: 25.152-b16
+2018-07-03 23:07:48 INFO  smslib:117 - O/S: Windows 10 / amd64 / 10.0
+2018-07-03 23:07:48 INFO  smslib:92 - Queue directory not defined. Queued messages will not be saved to filesystem.
+2018-07-03 23:07:48 INFO  smslib:188 - GTW: modem.COM11: Starting gateway, using Huawei (Generic) AT Handler.
+2018-07-03 23:07:48 INFO  smslib:68 - GTW: modem.COM11: Opening: COM11 @9600
+2018-07-03 23:07:48 INFO  smslib:120 - GTW: modem.COM11: Closing: COM11 @9600
+2018-07-03 23:07:49 INFO  smslib:197 - GTW: modem.COM11: Stopping gateway...
+2018-07-03 23:07:49 INFO  smslib:120 - GTW: modem.COM11: Closing: COM11 @9600
+2018-07-03 23:07:49 INFO  smslib:201 - GTW: modem.COM11: Gateway stopped.
+2018-07-03 23:07:49 INFO  smslib:197 - GTW: modem.COM11: Stopping gateway...
+2018-07-03 23:07:49 INFO  smslib:120 - GTW: modem.COM11: Closing: COM11 @9600
+2018-07-03 23:07:49 INFO  smslib:201 - GTW: modem.COM11: Gateway stopped.
+2018-07-03 23:08:58 INFO  ClassPathXmlApplicationContext:513 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1363fb3: startup date [Tue Jul 03 23:08:58 ICT 2018]; root of context hierarchy
+2018-07-03 23:08:58 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [spring-configuration.xml]
+2018-07-03 23:08:58 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-03 23:08:58 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2018-07-03 23:08:58 INFO  Version:54 - HHH000412: Hibernate Core {4.3.1.Final}
+2018-07-03 23:08:58 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2018-07-03 23:08:58 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2018-07-03 23:08:58 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/Catnip%20Dev/My%20Project/Pemrograman%20Jaringan/Mujigue/build/classes/hibernate.cfg.xml
+2018-07-03 23:08:58 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2018-07-03 23:08:58 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2018-07-03 23:08:58 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-07-03 23:08:58 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-07-03 23:08:58 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-03 23:08:59 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2018-07-03 23:08:59 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2018-07-03 23:08:59 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2018-07-03 23:08:59 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.admin
+2018-07-03 23:08:59 INFO  TableMetadata:67 - HHH000037: Columns: [password, nama, nip, id_admin]
+2018-07-03 23:08:59 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:08:59 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:08:59 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.daftarmeja
+2018-07-03 23:08:59 INFO  TableMetadata:67 - HHH000037: Columns: [id_meja, lokasimeja, no_meja, terisi, kapasitas_meja]
+2018-07-03 23:08:59 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:08:59 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:08:59 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.pelanggan
+2018-07-03 23:08:59 INFO  TableMetadata:67 - HHH000037: Columns: [notelp, totalpelanggan, waktubooking, namapelanggan, id_pelanggan]
+2018-07-03 23:08:59 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:08:59 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:08:59 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2018-07-03 23:08:59 INFO  HibernateTransactionManager:341 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@d10c1a] of Hibernate SessionFactory for HibernateTransactionManager
+2018-07-03 23:09:05 INFO  smslib:113 - SMSLib: A Java API library for sending and receiving SMS via a GSM modem or other supported gateways.
+This software is distributed under the terms of the Apache v2.0 License.
+Web Site: http://smslib.org
+2018-07-03 23:09:05 INFO  smslib:114 - Version: 3.5.0
+2018-07-03 23:09:05 INFO  smslib:115 - JRE Version: 1.8.0_172
+2018-07-03 23:09:05 INFO  smslib:116 - JRE Impl Version: 25.172-b11
+2018-07-03 23:09:05 INFO  smslib:117 - O/S: Windows 10 / x86 / 10.0
+2018-07-03 23:09:05 INFO  smslib:92 - Queue directory not defined. Queued messages will not be saved to filesystem.
+2018-07-03 23:09:05 INFO  smslib:188 - GTW: modem.COM11: Starting gateway, using Huawei (Generic) AT Handler.
+2018-07-03 23:09:05 INFO  smslib:68 - GTW: modem.COM11: Opening: COM11 @9600
+2018-07-03 23:09:12 INFO  smslib:446 - GTW: modem.COM11: GSM: Registered to home network.
+2018-07-03 23:09:12 INFO  smslib:175 - GTW: modem.COM11: MEM: Storage Locations Found: MESMSR
+2018-07-03 23:09:12 WARN  smslib:185 - GTW: modem.COM11: Callback indications were *not* set succesfully!
+2018-07-03 23:09:12 INFO  smslib:191 - GTW: modem.COM11: Gateway started.
+2018-07-03 23:09:16 INFO  smslib:197 - GTW: modem.COM11: Stopping gateway...
+2018-07-03 23:09:16 INFO  smslib:120 - GTW: modem.COM11: Closing: COM11 @9600
+2018-07-03 23:09:16 INFO  smslib:201 - GTW: modem.COM11: Gateway stopped.
+2018-07-03 23:10:54 INFO  ClassPathXmlApplicationContext:513 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1363fb3: startup date [Tue Jul 03 23:10:54 ICT 2018]; root of context hierarchy
+2018-07-03 23:10:54 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [spring-configuration.xml]
+2018-07-03 23:10:54 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-03 23:10:55 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2018-07-03 23:10:55 INFO  Version:54 - HHH000412: Hibernate Core {4.3.1.Final}
+2018-07-03 23:10:55 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2018-07-03 23:10:55 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2018-07-03 23:10:55 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/Catnip%20Dev/My%20Project/Pemrograman%20Jaringan/Mujigue/build/classes/hibernate.cfg.xml
+2018-07-03 23:10:55 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2018-07-03 23:10:55 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2018-07-03 23:10:55 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-07-03 23:10:55 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-07-03 23:10:55 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-03 23:10:55 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2018-07-03 23:10:55 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2018-07-03 23:10:55 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2018-07-03 23:10:55 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.admin
+2018-07-03 23:10:55 INFO  TableMetadata:67 - HHH000037: Columns: [password, nama, nip, id_admin]
+2018-07-03 23:10:55 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:10:55 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:10:55 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.daftarmeja
+2018-07-03 23:10:55 INFO  TableMetadata:67 - HHH000037: Columns: [id_meja, lokasimeja, no_meja, terisi, kapasitas_meja]
+2018-07-03 23:10:55 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:10:55 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:10:55 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.pelanggan
+2018-07-03 23:10:55 INFO  TableMetadata:67 - HHH000037: Columns: [notelp, totalpelanggan, waktubooking, namapelanggan, id_pelanggan]
+2018-07-03 23:10:55 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:10:55 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:10:55 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2018-07-03 23:10:55 INFO  HibernateTransactionManager:341 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@d10c1a] of Hibernate SessionFactory for HibernateTransactionManager
+2018-07-03 23:11:10 INFO  smslib:113 - SMSLib: A Java API library for sending and receiving SMS via a GSM modem or other supported gateways.
+This software is distributed under the terms of the Apache v2.0 License.
+Web Site: http://smslib.org
+2018-07-03 23:11:10 INFO  smslib:114 - Version: 3.5.0
+2018-07-03 23:11:10 INFO  smslib:115 - JRE Version: 1.8.0_172
+2018-07-03 23:11:10 INFO  smslib:116 - JRE Impl Version: 25.172-b11
+2018-07-03 23:11:10 INFO  smslib:117 - O/S: Windows 10 / x86 / 10.0
+2018-07-03 23:11:10 INFO  smslib:92 - Queue directory not defined. Queued messages will not be saved to filesystem.
+2018-07-03 23:11:10 INFO  smslib:188 - GTW: modem.COM11: Starting gateway, using Huawei (Generic) AT Handler.
+2018-07-03 23:11:10 INFO  smslib:68 - GTW: modem.COM11: Opening: COM11 @9600
+2018-07-03 23:11:17 INFO  smslib:446 - GTW: modem.COM11: GSM: Registered to home network.
+2018-07-03 23:11:17 INFO  smslib:175 - GTW: modem.COM11: MEM: Storage Locations Found: MESMSR
+2018-07-03 23:11:17 WARN  smslib:185 - GTW: modem.COM11: Callback indications were *not* set succesfully!
+2018-07-03 23:11:17 INFO  smslib:191 - GTW: modem.COM11: Gateway started.
+2018-07-03 23:11:21 INFO  smslib:197 - GTW: modem.COM11: Stopping gateway...
+2018-07-03 23:11:21 INFO  smslib:120 - GTW: modem.COM11: Closing: COM11 @9600
+2018-07-03 23:11:21 INFO  smslib:201 - GTW: modem.COM11: Gateway stopped.
+2018-07-03 23:12:09 INFO  ClassPathXmlApplicationContext:513 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1363fb3: startup date [Tue Jul 03 23:12:09 ICT 2018]; root of context hierarchy
+2018-07-03 23:12:09 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [spring-configuration.xml]
+2018-07-03 23:12:09 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-03 23:12:09 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2018-07-03 23:12:09 INFO  Version:54 - HHH000412: Hibernate Core {4.3.1.Final}
+2018-07-03 23:12:09 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2018-07-03 23:12:09 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2018-07-03 23:12:09 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/Catnip%20Dev/My%20Project/Pemrograman%20Jaringan/Mujigue/build/classes/hibernate.cfg.xml
+2018-07-03 23:12:09 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2018-07-03 23:12:09 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2018-07-03 23:12:09 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-07-03 23:12:10 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2018-07-03 23:12:10 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-03 23:12:10 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2018-07-03 23:12:10 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2018-07-03 23:12:10 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2018-07-03 23:12:10 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.admin
+2018-07-03 23:12:10 INFO  TableMetadata:67 - HHH000037: Columns: [password, nama, nip, id_admin]
+2018-07-03 23:12:10 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:12:10 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:12:10 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.daftarmeja
+2018-07-03 23:12:10 INFO  TableMetadata:67 - HHH000037: Columns: [id_meja, lokasimeja, no_meja, terisi, kapasitas_meja]
+2018-07-03 23:12:10 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:12:10 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:12:10 INFO  TableMetadata:66 - HHH000261: Table found: mujigue.pelanggan
+2018-07-03 23:12:10 INFO  TableMetadata:67 - HHH000037: Columns: [notelp, totalpelanggan, waktubooking, namapelanggan, id_pelanggan]
+2018-07-03 23:12:10 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2018-07-03 23:12:10 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2018-07-03 23:12:10 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2018-07-03 23:12:10 INFO  HibernateTransactionManager:341 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@d10c1a] of Hibernate SessionFactory for HibernateTransactionManager

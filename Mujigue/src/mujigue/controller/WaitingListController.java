@@ -104,10 +104,14 @@ public class WaitingListController {
                 app.setConfiguration("COM11", 9600, "Huawei", "E153", "0000", "+628315000032");
                 OutboundMessage msg = app.sendMessage(this.wlf.getEdtNoPel().getText().trim(), message);
                 System.out.println("Status SMS : " + msg.getMessageStatus());
-                JOptionPane.showMessageDialog(this.wlf, "Status Pesan : " + msg.getMessageStatus(), "Status Pengiriman Pesan", JOptionPane.INFORMATION_MESSAGE);
-                Pelanggan p = listPelanggan.get(this.wlf.getTblWaitingList().getSelectedRow());
-                App.getPelangganService().deletePelanggan(p);
-                resetform();
+                JOptionPane.showMessageDialog(this.wlf, "Status Pesan : " +msg.getMessageStatus(), "Status Pengiriman Pesan", JOptionPane.INFORMATION_MESSAGE);
+                if (msg.getMessageStatus().toString().equals("SENT")) {
+                    Pelanggan p = listPelanggan.get(this.wlf.getTblWaitingList().getSelectedRow());
+                    App.getPelangganService().deletePelanggan(p);
+                    resetform();
+
+                }
+
                 showData();
 
             } catch (Exception e) {
